@@ -1,0 +1,13 @@
+MVP
+
+Food Tracker App (Python)
+
+- The app will allow users to plan their weekly meals
+- Add specific ingredients to the database
+- Delete ingredients from the database
+- Edit previous selections
+- Plan weekdays separately
+- Display calorie count according to each ingredient/meal selected
+
+Future implementation:
+- Show graph with daily calorie intake for past week/month, along with averages
