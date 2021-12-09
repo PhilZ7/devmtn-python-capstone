@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu:400,700" rel="stylesheet">
 
     <!-- CSS Bootstrap -->
-    <link rel="stylesheet" href="./bs/css/united.min.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/static/bs/css/united.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/static/bs/css/styles.css') }}" />
 </head>
 <body>
     <div class="container-fluid" id="wrapper">
@@ -18,17 +18,17 @@
             <div class="overlay"></div>
             <div class="col-lg-12">
                 <h1>
-                    <a href="./">FOOD TRACKER</a>
+                    <a href="{{ url_for('main.index') }}">FOOD TRACKER</a>
                 </h1>
 
                 <div class="row t20">
                     <div class="col-lg-4 col-lg-offset-4">
                         <ul class="nav nav-pills nav-justified">
                             <li role="presentation" class="active">
-                                <a href="./" title="Home">Home</a>
+                                <a href="{{ url_for('main.index') }}" title="Home">Home</a>
                             </li>
                             <li role="presentation">
-                                <a href="./add.html" title="Add Food Item">Add Food Item</a>
+                                <a href="{{ url_for('main.add') }}" title="Add Food Item">Add Food Item</a>
                             </li>
                         </ul>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="panel-body text-bold">
                         <i class="glyphicon glyphicon-calendar"></i> December 07, 2021
 
-                        <a class="btn btn-primary btn-xs pull-right" href="./view.html">
+                        <a class="btn btn-primary btn-xs pull-right" href="{{ url_for('main.view') }}">
                             View <i class="glyphicon glyphicon-arrow-right"></i>
                         </a>
                     </div>
@@ -86,24 +86,7 @@
                 <div class="panel panel-warning">
                     <div class="panel-body text-bold">
                         <i class="glyphicon glyphicon-calendar"></i> December 14, 2021
-                        <a class="btn btn-primary btn-xs pull-right" href="./view.html">
-                            View <i class="glyphicon glyphicon-arrow-right"></i>
-                        </a>
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item text-bold"><span class="badge">60</span> Protein</li>
-                        <li class="list-group-item text-bold"><span class="badge">49</span> Carbohydrates</li>
-                        <li class="list-group-item text-bold"><span class="badge">55</span> Fat</li>
-                        <li class="list-group-item text-bold"><span class="badge">955</span> Calories</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="panel panel-warning">
-                    <div class="panel-body text-bold">
-                        <i class="glyphicon glyphicon-calendar"></i> December 14, 2021
-                        <a class="btn btn-primary btn-xs pull-right" href="./view.html">
+                        <a class="btn btn-primary btn-xs pull-right" href="{{ url_for('main.view') }}">
                             View <i class="glyphicon glyphicon-arrow-right"></i>
                         </a>
                     </div>
@@ -120,7 +103,24 @@
                 <div class="panel panel-warning">
                     <div class="panel-body text-bold">
                         <i class="glyphicon glyphicon-calendar"></i> December 14, 2021
-                        <a class="btn btn-primary btn-xs pull-right" href="./view.html">
+                        <a class="btn btn-primary btn-xs pull-right" href="{{ url_for('main.view') }}">
+                            View <i class="glyphicon glyphicon-arrow-right"></i>
+                        </a>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item text-bold"><span class="badge">60</span> Protein</li>
+                        <li class="list-group-item text-bold"><span class="badge">49</span> Carbohydrates</li>
+                        <li class="list-group-item text-bold"><span class="badge">55</span> Fat</li>
+                        <li class="list-group-item text-bold"><span class="badge">955</span> Calories</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="panel panel-warning">
+                    <div class="panel-body text-bold">
+                        <i class="glyphicon glyphicon-calendar"></i> December 14, 2021
+                        <a class="btn btn-primary btn-xs pull-right" href="{{ url_for('main.view') }}">
                             View <i class="glyphicon glyphicon-arrow-right"></i>
                         </a>
                     </div>
@@ -144,9 +144,9 @@
     </div>
 
     <!-- jQuery -->
-    <script src="./bs/js/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='bs/js/jquery.min.js') }}"></script>
     <!-- JavaScript Bootstrap -->
-    <script src="./bs/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='bs/js/bootstrap.min.js') }}"></script>
     
 </body>
 </html>
